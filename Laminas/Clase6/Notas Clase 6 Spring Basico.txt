@@ -1,0 +1,40 @@
+Algunas anotaciones para habilitar el uso del módulo de spring 
+
+
+@EnableWebMVC   	// Usada para activar Spring Web MVC
+@EnableCaching  	// Usada para activar Spring Cache
+@EnableWebSecurity	// Usada para activar Spring Security
+@EnableEurekaServer     // Usada para activar Spring Eureka Server
+@EnableEurekaClient	// Usada para activar Spring Eureka Client
+@EnableZuulProxy	// Usada para activar Spring Gateway Zuul
+@EnableCircuitBreaker	// Usada para activar Spring Hystrix Circuit Breaker
+@FeignClient            // Usada para activar Spring Feign Client
+
+Feign Client
+Cliente sencillo y rápido que tiene spring cloud para consumo de servicios web
+
+
+Eureka: Service Registry
+Eureka se comporta como servidor , cuyo objetivo es registrar y localizar  microservicios/servicios existentes, informar de su localización, su estado y datos relevantes de cada de ellos. Además, nos facilita el balanceo de carga y tolerancia a fallos.
+
+Tenemos Eureka Client y Eureka Server 
+Eureka Client: Es un microservicio/ servicio registrado como un cliente en el servidor Eureka, el cliente del microservicio/ servicio registrado como un cliente en el servidor Eureka.
+
+
+Eureka Server: Es un servidor que autodetecta los microservicios / servicios y los registra (contiene metadata de ellos tales como: host, puerto, health URL, etc )
+
+
+Zuul: Gateway (Router and Filter)
+
+Zuul es una librería generada por Netflix para tener un sólo punto de acceso (gateway) a todos a los componentes que hacen parte de mi sistema. Por medio de este podemos gestionar el acceso a diferentes microservicios en vez de que cada uno tenga un punto de acceso único.
+
+Zuul proporciona un completo control del punto de acceso para poder gestionar de una manera dinámica el enrutamiento y filtrado de las peticiones que se hacen a través de la misma.
+
+
+
+Circuit Breaker de Hystrix (mejorar resiliencia en sistemas distribuidos) 
+Documentación oficial: https://github.com/Netflix/Hystrix
+
+Se trata de una librería ofrecida por Netflix diseñada para aislar puntos de acceso a sistemas 
+remotos, servicios y librerías de terceros, deteniendo fallos en cascada y permitiendo mejorar la resiliencia en sistemas complejos distribuidos donde las probabilidad de fallo es inevitable.
+
